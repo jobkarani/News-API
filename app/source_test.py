@@ -1,5 +1,5 @@
 import unittest
-from models import movie
+from models import source
 Source = source.Source
 
 class SourceTest(unittest.TestCase):
@@ -11,7 +11,7 @@ class SourceTest(unittest.TestCase):
         '''
         Set up method that will run before every Test
         '''
-        self.new_source = Source("Ayub", "Breaking News", "William Ruto", "tuko.co.ke","img.jpg","30-10-2021")
+        self.new_source = Source("Ayub", "Breaking News", "William Ruto", "tuko.co.ke","Financial Review","Kenya")
 
     def test_instance(self):
         self.assertTrue(isinstance(self.new_source,Source))
