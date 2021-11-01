@@ -32,6 +32,7 @@ def get_source():
 
     return source_results
 
+
 def process_results(source_result):
     '''
     Function that processes the source list result and transform them to a list of Objects
@@ -45,8 +46,8 @@ def process_results(source_result):
         category = one_result.get('category')
         language = one_result.get('language')
 
-        source_object = Source(id, name, description, url, category, language)
-        source_results.append(source_object)
+        data_sources = Source(id, name, description, url, category, language)
+        source_results.append(data_sources)
 
     return source_results
 
@@ -61,8 +62,8 @@ def process_articles_results(articles_result):
         publishedAt = one_result.get('publishedAt')
         content = one_result.get('content')
 
-        article_object = Article(author,title, description, url, urlToImage, publishedAt,content)
-        articles_results.append(article_object)
+        article_data  = Article(author,title, description, url, urlToImage, publishedAt,content)
+        articles_results.append(article_data )
 
     return articles_results
 
@@ -82,3 +83,4 @@ def get_article(source_id):
             source_results = process_articles_results(source_results_list)
 
     return source_results
+

@@ -3,5 +3,12 @@
 
 
         {% block content %}
-        {{macro.displayArticleList(articles)}}
+        <div class="container">
+                <div class="row">
+                        <div class="col-md-6">
+                                {{macro.displayArticleList(articles)}}
+                        </div>
+                </div>
+        </div>
+        
         {% endblock%}
