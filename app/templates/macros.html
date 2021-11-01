@@ -1,6 +1,6 @@
 {% macro displaySourceList(source_list) %}
 
-    {% for source in source_list %}
+{% for source in source_list %}
     <div class='col-md-3 '>
         <div class='panel panel-default'>
             <div class="panel-header">
@@ -9,23 +9,25 @@
             <div class="panel-body">
                 <p>{{source.description}}</p>
             </div>
-            <div class="pane-footer">
+            <div class="panel-footer">
                 <li> <a href="/articles/{{ source.id}}"><button>Articles</button></a></li>
             </div>
         </div>
     </div>
-    </div>
-    {% endfor %}
+</div>
+{% endfor %}
 
 {% endmacro %}
 
 {% macro displayArticleList(article_list) %}
 
 <h1 class="text-center">ARTICLES</h1>
+
 <div class="container">
     <div class="card-group">
         {% for article in article_list %}
-        <div class="card" style="min-width: 25rem; max-width: 28rem; margin-top: 30px; margin-bottom: 30px;margin-right: 10px;">
+        <div class="card"
+            style="min-width: 25rem; max-width: 28rem; margin-top: 30px; margin-bottom: 30px;margin-right: 10px;">
             <img class="card-img-top" src="{{article.urlToImage}}" alt="Card image cap">
             <div class="card-body">
                 <h3 class="card-title">{{article.title}}</h3>
@@ -42,6 +44,3 @@
 
 
 {% endmacro %}
-
-
-
