@@ -1,9 +1,9 @@
-from flask import render_template
-from app import app
-from .request import get_source,get_article
+from flask import render_template,request,redirect,url_for
+from . import main
+from ..request import get_source,get_article
 
 
-@app.route('/')
+@main.route('/')
 def index():
 
     '''
@@ -20,7 +20,7 @@ def index():
     title = 'Home - Welcome to Online News Website'
     return render_template('index.html', title = title, popular = popular_sources,business = business_news,sport = sport_news )
 
-@app.route('/articles/<source_id>')
+@main.route('/articles/<source_id>')
 def articles(source_id):
     articles = get_article(source_id)
     print(articles)
