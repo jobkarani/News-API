@@ -5,7 +5,9 @@
     font-family: 'Noto Sans JP', sans-serif;
 }
 
-
+h1{
+    text-align: center;
+}
 .btn{
     background-color: blue;
 }
