@@ -2,20 +2,22 @@
 {% import 'macros.html' as macro%}
 
 
+
+
         {% block content %}
         <!-- Popular movie -->
         <h3> Popular News</h3>
-        <ul>
+        <ul class="color">
             {{ macro.displaySourceList(popular)}}
         </ul>
         <!-- Upcoming movie  -->
         <h3> Business news </h3>
-        <ul>
+        <ul class="color">
             {{ macro.displaySourceList(business)}}
         </ul>
         <!-- Now showing movie -->
         <h3>Sports news</h3>
-        <ul>
+        <ul class="color">
             {{ macro.displaySourceList(sport)}}
         </ul>
         {% block styles%}

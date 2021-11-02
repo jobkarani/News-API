@@ -1,17 +1,22 @@
 {% macro displaySourceList(source_list) %}
 
-{% for source in source_list %}
-    <div class='col-md-6 '>
-        <div class='panel panel-default bg-success'>
-            <div class="panel-header">
-                <h3 class="text-info">{{source.name}}</h3>
+
+<div class="container">
+    <div class="row">
+        {% for source in source_list %}
+        <div class='card col-md-4 color'>
+            <div class='panel panel-default '>
+                <div class="panel-header ">
+                    <h3 class="text-info">{{source.name}}</h3>
+                </div>
+                <div class="panel-body">
+                    <p>{{source.description}}</p>
+                </div>
+                <div class="panel-footer">
+                    <a href="/articles/{{ source.id}}"><button class="btn bg-primary">Articles</button></a>
+                </div>
             </div>
-            <div class="panel-body">
-                <p>{{source.description}}</p>
-            </div>
-            <div class="panel-footer">
-                <li> <a href="/articles/{{ source.id}}"><button class="btn bg-primary">Articles</button></a></li>
-            </div>
+
         </div>
     </div>
 </div>
@@ -26,20 +31,20 @@
 <div class="container">
     <div class="card-group">
         {% for article in article_list %}
-    <div class='col-md-4 '>
-        <div class="card "
-            style="min-width: 25rem; max-width: 28rem; margin-top: 30px; margin-bottom: 30px;margin-right: 10px; bg-success">
-            <img class="card-img-top" src="{{article.urlToImage}}" alt="Card image cap" height="90%" width="90%">
-            <div class="card-body">
-                <h3 class="card-title">{{article.title}}</h3>
-                <p class="card-text">{{article.description}}</p>
-                <a href="{{article.url}}" class="btn btn-outline-primary"><button class="btn bg-primary">OpenInWeb</button></a>
-            </div>
-            <div class="card-footer text-muted">
-                <p>Published On: {{ article.publishedAt }}</p>
+        <div class='col-md-4 '>
+            <div class="card ">
+                <img class="card-img-top" src="{{article.urlToImage}}" alt="Card image cap" height="90%" width="90%">
+                <div class="card-body">
+                    <h3 class="card-title">{{article.title}}</h3>
+                    <p class="card-text">{{article.description}}</p>
+                    <a href="{{article.url}}" class="btn btn-outline-primary"><button
+                            class="btn bg-primary">OpenInWeb</button></a>
+                </div>
+                <div class="card-footer text-muted">
+                    <p>Published On: {{ article.publishedAt }}</p>
+                </div>
             </div>
         </div>
-    </div>
         {% endfor %}
     </div>
 </div>
