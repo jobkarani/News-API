@@ -19,7 +19,7 @@ There are no bugs as of now :)
 * News api
 
 ## Setup/Installations Requirements
-* This is the live link to view the project <b><a> </a></b>
+* This is the live link to view the project <b><a href="https://newwss-api.herokuapp.com/">View</a></b>
 
 ## Support and contact details
 If you have any suggestion or contributions about this project, you can reach out to me on:
